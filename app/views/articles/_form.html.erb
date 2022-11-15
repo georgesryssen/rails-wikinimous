@@ -1,0 +1,17 @@
+<%= form_with model: article, :html => {:class => "form-horizontal center"} do |f| %>
+    <div class="form-group" style="margin: 10px 0px 5px;">
+      <%= f.label :title, "Title:", class: "col-md-4 control-label" %>
+      <div class="col-md-8" style="margin: 5px 0px;">
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-outline mb-4" style="margin: 20px 0px 5px;">
+      <%= f.label :content, "Content:", class: "col-md-4 control-label" %>
+      <div class="form-group" style="margin: 5px 0px;">
+        <%= f.text_area :content, class: "form-control", :rows => 5 %>
+      </div>
+    </div>
+  <div style="margin: 30px 0px 30px;">
+    <%= f.submit %>
+  </div>
+<% end %>
